@@ -8,3 +8,5 @@ A simple Tic Tac Toe game I made on a Saturday morning while teaching my son C++
    their university classes so I figured I would give it
    a shot. I could probably dress it up with SFML, but
    a simple game deserves a simple gui.
+   
+   ![](ticTacToeScreenshot.png)
