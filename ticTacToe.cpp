@@ -48,7 +48,7 @@ public:
 
 		int imove = move[0] - 48;
 
-		pair pos = this->position[imove];
+		pair<int, int> pos = this->position[imove];
 
 		if(board[pos.first][pos.second] != ' ')
 			return false;
@@ -57,7 +57,7 @@ public:
 	}
 
 	void placeMove(char mark, int position) {
-		pair pos = this->position[position];
+		pair<int, int> pos = this->position[position];
 		board[pos.first][pos.second] = mark;
 	}
 
@@ -150,12 +150,15 @@ int main() {
 
 		turnCount++;
 		if(turnCount >= 9) {
-			victor = "==================================\n\t\tDraw!\n==================================";
+			victor = "\t\t  Draw!\n==========================================";
 			break;
 		}
 	}
 
 	cout << victor << endl;
+
+	cout << "Press ENTER to exit." << endl;
+	getline(cin, playerMove);
 
 	return 0;
 }
